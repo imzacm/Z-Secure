@@ -10,6 +10,8 @@ To build
 To use
 ------
 1. Build it
-2a. ./main\n
+2a. ./main
+
 2b. ./main encrypt text key
+
 2c. ./main decrypt text key
