@@ -13,18 +13,23 @@ int main(int argc, char *argv[])
 {
   if (argc == 4)
   {
+    string args;
+    for (unsigned int i = 0; i < argc; i++)
+    {
+      args[i] = argv[i];
+    }
     int key = atoi(argv[3]);
-    if (string(argv[1]) == "encrypt")
+    if (args[1] == "encrypt")
     {
       string cryptoText = encrypt(string(argv[2]), key);
       cout << cryptoText << "\n";
     }
-    if (string(argv[1]) == "decrypt")
+    if (args[1] == "decrypt")
     {
       string plainText = decrypt(string(argv[2]), key);
       cout << plainText << "\n";
     }
-    if (string(argv[1]) != "encrypt" && string(argv[1]) != "decrypt")
+    if (args1] != "encrypt" && string(argv[1]) != "decrypt")
     {
       cout << "usage: main encrypt/decrypt <text> <key>\n";
     }
@@ -37,7 +42,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-      cout << "1) Encrypt\n2) Decrypt\n";
+      cout << "Please choose:\n1) Encrypt\n2) Decrypt\n";
       int choice;
       cin >> choice;
       if (choice != 1 && choice != 2)
