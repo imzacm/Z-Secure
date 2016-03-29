@@ -21,15 +21,15 @@ int main(int argc, char *argv[])
     int key = atoi(argv[3]);
     if (args[1] == "encrypt")
     {
-      string cryptoText = encrypt(string(argv[2]), key);
+      string cryptoText = encrypt(args[2], key);
       cout << cryptoText << "\n";
     }
     if (args[1] == "decrypt")
     {
-      string plainText = decrypt(string(argv[2]), key);
+      string plainText = decrypt(args[2], key);
       cout << plainText << "\n";
     }
-    if (args1] != "encrypt" && string(argv[1]) != "decrypt")
+    if (args[1] != "encrypt" && args[1] != "decrypt")
     {
       cout << "usage: main encrypt/decrypt <text> <key>\n";
     }
