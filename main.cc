@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 #include <string>
 #include <iostream>
 
@@ -13,10 +12,10 @@ int main(int argc, char *argv[])
 {
   if (argc == 4)
   {
-    string args;
-    for (unsigned int i = 0; i < argc; i++)
+    string args[argc];
+    for (int i = 0; i < argc; i++)
     {
-      args[i] = argv[i];
+      args[i] = string(argv[i]);
     }
     int key = atoi(argv[3]);
     if (args[1] == "encrypt")
